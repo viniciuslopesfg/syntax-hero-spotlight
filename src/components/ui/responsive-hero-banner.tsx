@@ -34,13 +34,21 @@ export function ResponsiveHeroBanner({
         className="absolute inset-0 z-0 h-full w-full object-cover"
       />
 
-      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center justify-center px-6 pt-32 pb-20 text-center sm:px-8">
+      <div
+        className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center justify-center px-6 pt-32 pb-20 text-center sm:px-8"
+        style={{
+          background:
+            "radial-gradient(ellipse at center, rgba(0,0,0,0.45) 0%, transparent 75%)",
+        }}
+      >
         {/* Headline */}
         <h1
           className="animate-fade-slide-in font-display font-bold leading-tight text-text-100 text-4xl md:text-5xl lg:text-[60px]"
           style={{
             letterSpacing: "-0.02em",
             animationDelay: "0.1s",
+            textShadow:
+              "0 2px 12px rgba(0,0,0,0.9), 0 4px 40px rgba(0,0,0,0.7)",
           }}
         >
           {title}
