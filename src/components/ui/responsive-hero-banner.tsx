@@ -21,7 +21,7 @@ export function ResponsiveHeroBanner({
 }: ResponsiveHeroBannerProps) {
   const stats = [
     { value: "+20", label: "Empresas atendidas" },
-    { value: "42.567", label: "Leads qualificados entregues" },
+    { value: "+42.567", label: "Leads qualificados entregues" },
     { value: "24/7", label: "Sem folga" },
   ];
 
