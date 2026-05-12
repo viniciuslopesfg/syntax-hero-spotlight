@@ -27,13 +27,13 @@ function Index() {
     <main className="min-h-screen bg-bg-0 text-text-100">
       <Navbar />
       <ResponsiveHeroBanner
-        badgeText="Agência de IA para times de vendas B2B"
-        title="Sua máquina de"
-        titleLine2="geração de"
+        badgeText="Agentes de IA Autônomos • Ecossistemas de Tecnologia"
+        title="Seu próximo funcionário não dorme,"
+        titleLine2="não falta e nunca perde um"
         titleAccent="lead."
-        description="A Syntax cria agentes de IA que prospectam, qualificam e agendam reuniões com decisores — em escala, 24 horas por dia, sem turnover e sem desculpa."
-        primaryCtaText="Quero meu agente"
-        secondaryCtaText="Ver como funciona"
+        description="Agentes de IA comerciais sob medida para a sua empresa — que prospectam, qualificam leads e reativam clientes. Sem contratar mais ninguém."
+        primaryCtaText="Quero meu Agente de IA →"
+        secondaryCtaText="Ver resultados reais"
       />
     </main>
   );
