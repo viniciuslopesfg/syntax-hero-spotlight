@@ -94,7 +94,7 @@ export function ResponsiveHeroBanner({
                   "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.18) 50%, transparent 100%)",
               }}
             />
-            <span className="relative pl-6 pr-4 text-white text-[16px]" style={{ fontWeight: 500 }}>
+            <span className="relative flex-1 text-center pl-4 pr-2 text-white text-[16px]" style={{ fontWeight: 500 }}>
               {primaryCtaText}
             </span>
             <span
