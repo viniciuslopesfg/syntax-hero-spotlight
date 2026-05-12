@@ -36,6 +36,7 @@ function Index() {
         primaryCtaText="Quero meu Agente de IA"
         secondaryCtaText="Ver resultados reais"
       />
+      <LogoCarousel />
     </main>
   );
 }
