@@ -31,7 +31,7 @@ function Index() {
         title="Seu próximo funcionário não dorme,"
         titleLine2="não falta e nunca perde um"
         titleAccent="lead."
-        description="Agentes de IA comerciais sob medida para a sua empresa — que prospectam, qualificam leads e reativam clientes. Sem contratar mais ninguém."
+        description="Construímos Agentes de IA sob medida que prospectam, qualificam e reativam leads sem aumentar sua equipe"
         primaryCtaText="Quero meu Agente de IA"
         secondaryCtaText="Ver resultados reais"
       />
