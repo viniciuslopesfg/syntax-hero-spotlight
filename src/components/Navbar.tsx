@@ -35,10 +35,24 @@ export function Navbar() {
           <div className="hidden md:block">
             <a
               href="#contato"
-              className="inline-flex items-center rounded-full px-5 py-2 text-sm font-semibold transition-all duration-200 hover:scale-[1.02]"
-              style={{ background: "#FF6B2B", color: "#000000" }}
+              className="relative overflow-hidden inline-flex items-center rounded-full px-5 py-2 text-sm text-white transition-all duration-[250ms] ease-out hover:scale-[1.02] hover:brightness-110"
+              style={{
+                background: "linear-gradient(135deg, #FF5C00 0%, #cc3300 40%, #1a0800 100%)",
+                boxShadow:
+                  "inset 0 1px 0 rgba(255,255,255,0.18), inset 0 -1px 0 rgba(0,0,0,0.25), 0 4px 18px rgba(255,92,0,0.3)",
+                backdropFilter: "blur(4px)",
+                fontWeight: 500,
+              }}
             >
-              Falar com a Syntax
+              <span
+                aria-hidden
+                className="animate-shine-sweep pointer-events-none absolute inset-y-0 left-0 w-1/3"
+                style={{
+                  background:
+                    "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.18) 50%, transparent 100%)",
+                }}
+              />
+              <span className="relative">Falar com a Syntax</span>
             </a>
           </div>
 

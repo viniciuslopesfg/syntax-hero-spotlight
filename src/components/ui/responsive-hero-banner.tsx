@@ -56,7 +56,8 @@ export function ResponsiveHeroBanner({
             <span
               className="italic bg-clip-text text-transparent"
               style={{
-                backgroundImage: "linear-gradient(90deg, #c084fc 0%, #a855f7 50%, #7c3aed 100%)",
+                backgroundImage:
+                  "linear-gradient(90deg, #FFB07A 0%, #FF5C00 50%, #B33A00 100%)",
               }}
             >
               {titleAccent}
