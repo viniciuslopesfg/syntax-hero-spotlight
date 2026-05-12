@@ -36,16 +36,8 @@ export function ResponsiveHeroBanner({
 
       <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center justify-center px-6 pt-32 pb-20 text-center sm:px-8">
         {/* Unified badge */}
-        <div
-          className="animate-fade-slide-in mb-8 inline-flex items-center gap-2 rounded-full border bg-bg-200/60 px-4 py-1.5 text-xs font-medium uppercase backdrop-blur-sm"
-          style={{
-            borderColor: "#FF5C00",
-            color: "#FF5C00",
-            letterSpacing: "0.12em",
-            fontWeight: 500,
-          }}
-        >
-          <span className="h-1.5 w-1.5 rounded-full" style={{ background: "#FF5C00", boxShadow: "0 0 12px #FF5C00" }} />
+        <div className="animate-fade-slide-in mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-bg-200/60 px-4 py-1.5 text-xs font-medium text-text-200 backdrop-blur-sm">
+          <span className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_12px_var(--accent)]" />
           {badgeText}
         </div>
 
