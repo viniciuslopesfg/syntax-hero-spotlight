@@ -47,8 +47,7 @@ export function ResponsiveHeroBanner({
           style={{
             letterSpacing: "-0.02em",
             animationDelay: "0.1s",
-            textShadow:
-              "0 2px 12px rgba(0,0,0,0.9), 0 4px 40px rgba(0,0,0,0.7)",
+            textShadow: "0 1px 3px rgba(0,0,0,0.4), 0 2px 12px rgba(0,0,0,0.35)",
           }}
         >
           {title}
