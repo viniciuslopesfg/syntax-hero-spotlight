@@ -58,6 +58,15 @@
   100% { transform: translateX(-50%); }
 }
 
+@keyframes shine-sweep {
+  0% { transform: translateX(-150%) skewX(-20deg); }
+  100% { transform: translateX(350%) skewX(-20deg); }
+}
+
+.animate-shine-sweep {
+  animation: shine-sweep 3.5s ease-in-out infinite;
+}
+
 .animate-fade-slide-in {
   animation: fadeSlideIn 0.8s ease-out both;
 }
