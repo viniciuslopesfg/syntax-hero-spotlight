@@ -32,7 +32,7 @@ function Index() {
         titleLine2="não falta e nunca perde um"
         titleAccent="lead."
         description="Agentes de IA comerciais sob medida para a sua empresa — que prospectam, qualificam leads e reativam clientes. Sem contratar mais ninguém."
-        primaryCtaText="Quero meu Agente de IA →"
+        primaryCtaText="Quero meu Agente de IA"
         secondaryCtaText="Ver resultados reais"
       />
     </main>
