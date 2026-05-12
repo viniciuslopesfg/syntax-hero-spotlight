@@ -37,24 +37,11 @@ export function ResponsiveHeroBanner({
   return (
     <section className="relative min-h-screen w-full overflow-hidden bg-bg-0 text-text-100">
       {/* Ambient glow */}
-      <div
+      <img
+        src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/0e2dbea0-c0a9-413f-a57b-af279633c0df_3840w.jpg"
+        alt=""
         aria-hidden
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(60% 50% at 50% 0%, rgba(255,107,43,0.18) 0%, rgba(255,107,43,0.04) 40%, transparent 70%)",
-        }}
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-[0.04]"
-        style={{
-          backgroundImage:
-            "linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)",
-          backgroundSize: "64px 64px",
-          maskImage:
-            "radial-gradient(ellipse at center, black 30%, transparent 75%)",
-        }}
+        className="absolute inset-0 z-0 h-full w-full object-cover"
       />
 
       <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center justify-center px-6 pt-32 pb-32 text-center sm:px-8 lg:pb-28">
