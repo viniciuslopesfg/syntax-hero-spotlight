@@ -27,7 +27,7 @@ function Index() {
     <main className="min-h-screen bg-bg-0 text-text-100">
       <Navbar />
       <ResponsiveHeroBanner
-        badgeText="Agentes de IA Autônomos • Ecossistemas de Tecnologia"
+        
         title="Seu próximo funcionário não dorme,"
         titleLine2="não falta e nunca perde um"
         titleAccent="lead."
