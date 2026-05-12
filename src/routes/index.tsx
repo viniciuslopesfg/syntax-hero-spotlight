@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { ResponsiveHeroBanner } from "@/components/ui/responsive-hero-banner";
+import LogoCarousel from "@/components/ui/logo-carousel";
 
 export const Route = createFileRoute("/")({
   component: Index,
