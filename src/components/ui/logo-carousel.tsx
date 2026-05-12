@@ -1,97 +1,90 @@
-import React from "react";
-
 const logos = [
-  { name: "N8N", url: "https://n8n.io/favicon.ico", width: 32 },
-  { name: "Anthropic", url: "https://www.anthropic.com/favicon.ico", width: 32 },
-  {
-    name: "Meta",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Meta_Platforms_Inc._logo.svg/512px-Meta_Platforms_Inc._logo.svg.png",
-    width: 80,
-  },
-  {
-    name: "OpenAI",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/OpenAI_Logo.svg/512px-OpenAI_Logo.svg.png",
-    width: 80,
-  },
-  {
-    name: "WhatsApp",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png",
-    width: 32,
-  },
-  {
-    name: "Make",
-    url: "https://images.ctfassets.net/qqlj6g4ee76j/4lqFV4VxGiFMIRMbDxE8yY/f53af36f3ce74f13da1f68adbd9ca9e2/make-logo-new.png",
-    width: 80,
-  },
-  {
-    name: "Python",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/512px-Python-logo-notext.svg.png",
-    width: 32,
-  },
-  {
-    name: "React",
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png",
-    width: 32,
-  },
+  { name: "OpenAI", url: "https://cdn.simpleicons.org/openai/ffffff" },
+  { name: "Meta", url: "https://cdn.simpleicons.org/meta/ffffff" },
+  { name: "WhatsApp", url: "https://cdn.simpleicons.org/whatsapp/ffffff" },
+  { name: "N8N", url: "https://cdn.simpleicons.org/n8n/ffffff" },
+  { name: "Python", url: "https://cdn.simpleicons.org/python/ffffff" },
+  { name: "React", url: "https://cdn.simpleicons.org/react/ffffff" },
+  { name: "Anthropic", url: "https://cdn.simpleicons.org/anthropic/ffffff" },
+  { name: "Zapier", url: "https://cdn.simpleicons.org/zapier/ffffff" },
 ];
 
 const LogoCarousel = () => {
   const doubled = [...logos, ...logos];
 
   return (
-    <section className="w-full bg-bg-0 py-16">
+    <section
+      className="w-full"
+      style={{
+        padding: "64px 0",
+        borderTop: "1px solid rgba(255,255,255,0.06)",
+        background: "transparent",
+      }}
+    >
       <p
-        className="mb-10 text-center uppercase text-text-100"
+        className="mb-10 text-center uppercase"
         style={{
-          fontWeight: 400,
+          fontFamily: "'Space Grotesk', sans-serif",
           fontSize: "11px",
-          opacity: 0.45,
-          letterSpacing: "0.12em",
+          letterSpacing: "0.16em",
+          opacity: 0.3,
         }}
       >
         Tecnologias que utilizamos
       </p>
 
-      <div className="relative overflow-hidden">
-        {/* Fade edges */}
+      <div style={{ position: "relative", width: "100%", overflow: "hidden" }}>
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24"
           style={{
-            background:
-              "linear-gradient(90deg, var(--color-bg-0, #0a0a0a) 0%, transparent 100%)",
+            position: "absolute",
+            left: 0,
+            top: 0,
+            bottom: 0,
+            width: "220px",
+            background: "linear-gradient(to right, #000000 40%, transparent)",
+            zIndex: 10,
+            pointerEvents: "none",
           }}
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24"
           style={{
-            background:
-              "linear-gradient(270deg, var(--color-bg-0, #0a0a0a) 0%, transparent 100%)",
+            position: "absolute",
+            right: 0,
+            top: 0,
+            bottom: 0,
+            width: "220px",
+            background: "linear-gradient(to left, #000000 40%, transparent)",
+            zIndex: 10,
+            pointerEvents: "none",
           }}
         />
 
-        {/* Scrolling track */}
         <div
-          className="flex w-max items-center gap-16"
-          style={{ animation: "marquee 30s linear infinite" }}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            width: "max-content",
+            gap: "80px",
+            animation: "marquee 32s linear infinite",
+          }}
         >
           {doubled.map((logo, i) => (
-            <div
+            <img
               key={`${logo.name}-${i}`}
-              className="flex h-12 shrink-0 items-center justify-center transition-opacity duration-200"
-              style={{ opacity: 0.45 }}
+              src={logo.url}
+              alt={logo.name}
+              style={{
+                height: "36px",
+                width: "auto",
+                objectFit: "contain",
+                opacity: 0.4,
+                transition: "opacity 300ms",
+              }}
               onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.85")}
-              onMouseLeave={(e) => (e.currentTarget.style.opacity = "0.45")}
-            >
-              <img
-                src={logo.url}
-                alt={logo.name}
-                style={{ width: logo.width, height: "auto", maxHeight: 40 }}
-                className="object-contain"
-                loading="lazy"
-              />
-            </div>
+              onMouseLeave={(e) => (e.currentTarget.style.opacity = "0.4")}
+            />
           ))}
         </div>
       </div>
