@@ -78,7 +78,7 @@ export function ResponsiveHeroBanner({
           style={{ animationDelay: "0.3s" }}
         >
           <button
-            className="flex items-center justify-between rounded-full p-2 transition-all duration-[250ms] ease-out hover:scale-[1.02] hover:brightness-110 w-full sm:w-auto sm:min-w-[320px]"
+            className="relative overflow-hidden flex items-center justify-between rounded-full p-2 transition-all duration-[250ms] ease-out hover:scale-[1.02] hover:brightness-110 w-full sm:w-auto sm:min-w-[320px]"
             style={{
               background: "linear-gradient(135deg, #FF5C00 0%, #cc3300 40%, #1a0800 100%)",
               boxShadow: "inset 0 1px 0 rgba(255,255,255,0.18), inset 0 -1px 0 rgba(0,0,0,0.25), 0 4px 24px rgba(255,92,0,0.3)",
@@ -86,11 +86,19 @@ export function ResponsiveHeroBanner({
               fontWeight: 500,
             }}
           >
-            <span className="pl-6 pr-4 text-white text-[16px]" style={{ fontWeight: 500 }}>
+            <span
+              aria-hidden
+              className="animate-shine-sweep pointer-events-none absolute inset-y-0 left-0 w-1/3"
+              style={{
+                background:
+                  "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.18) 50%, transparent 100%)",
+              }}
+            />
+            <span className="relative pl-6 pr-4 text-white text-[16px]" style={{ fontWeight: 500 }}>
               {primaryCtaText}
             </span>
             <span
-              className="flex h-10 w-10 items-center justify-center rounded-full text-white"
+              className="relative flex h-10 w-10 items-center justify-center rounded-full text-white"
               style={{ background: "rgba(0,0,0,0.35)" }}
             >
               <ArrowRight className="h-4 w-4" />
