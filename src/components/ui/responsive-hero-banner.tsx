@@ -45,9 +45,11 @@ export function ResponsiveHeroBanner({
 
         {/* Headline */}
         <h1
-          className="animate-fade-slide-in font-display font-bold leading-tight text-text-100 text-4xl md:text-5xl lg:text-[60px]"
+          className="animate-fade-slide-in font-display text-text-100 text-4xl md:text-5xl lg:text-[56px]"
           style={{
+            fontWeight: 800,
             letterSpacing: "-0.02em",
+            lineHeight: 1.08,
             animationDelay: "0.1s",
           }}
         >
@@ -69,8 +71,16 @@ export function ResponsiveHeroBanner({
 
         {/* Description */}
         <p
-          className="animate-fade-slide-in mt-6 max-w-2xl text-base leading-relaxed text-text-300 sm:text-lg"
-          style={{ animationDelay: "0.2s", fontWeight: 300, letterSpacing: "0.01em" }}
+          className="animate-fade-slide-in mt-6"
+          style={{
+            animationDelay: "0.2s",
+            fontWeight: 300,
+            color: "rgba(255, 255, 255, 0.55)",
+            fontSize: "17px",
+            lineHeight: 1.7,
+            maxWidth: "460px",
+            margin: "24px auto 0",
+          }}
         >
           {description}
         </p>
@@ -117,7 +127,7 @@ export function ResponsiveHeroBanner({
 
         {/* Social proof */}
         <div
-          className="animate-fade-slide-in mt-20 w-full max-w-3xl"
+          className="animate-fade-slide-in mt-16 w-full max-w-3xl"
           style={{ animationDelay: "0.4s" }}
         >
           <div className="mb-6 flex items-center justify-center gap-3">
@@ -131,10 +141,21 @@ export function ResponsiveHeroBanner({
             {stats.map((item, i) => (
               <div key={item.label} className="flex items-center gap-6 sm:gap-10">
                 <div className="text-center">
-                  <div className="font-display text-2xl font-bold text-text-100 sm:text-3xl">
+                  <div
+                    className="font-display text-text-100"
+                    style={{ fontWeight: 700, fontSize: "28px" }}
+                  >
                     {item.value}
                   </div>
-                  <div className="mt-1 text-xs uppercase tracking-wider text-text-400">
+                  <div
+                    className="mt-1 uppercase text-text-100"
+                    style={{
+                      fontWeight: 400,
+                      fontSize: "11px",
+                      opacity: 0.45,
+                      letterSpacing: "0.12em",
+                    }}
+                  >
                     {item.label}
                   </div>
                 </div>
