@@ -19,15 +19,6 @@ export function ResponsiveHeroBanner({
   primaryCtaText,
   secondaryCtaText,
 }: ResponsiveHeroBannerProps) {
-  const tickerItems = [
-    { value: "<30s", label: "tempo de resposta" },
-    { value: "24/7", label: "sem folga, sem turnover" },
-    { value: "10×", label: "a capacidade de 1 SDR humano" },
-    { value: "+60%", label: "de tempo livre para vendas" },
-    { value: "42k+", label: "leads qualificados" },
-    { value: "15 dias", label: "do zero ao agente no ar" },
-  ];
-
   const stats = [
     { value: "+20", label: "Empresas atendidas" },
     { value: "42.567", label: "Leads qualificados entregues" },
@@ -36,7 +27,6 @@ export function ResponsiveHeroBanner({
 
   return (
     <section className="relative min-h-screen w-full overflow-hidden bg-bg-0 text-text-100">
-      {/* Ambient glow */}
       <img
         src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/0e2dbea0-c0a9-413f-a57b-af279633c0df_3840w.jpg"
         alt=""
@@ -44,20 +34,26 @@ export function ResponsiveHeroBanner({
         className="absolute inset-0 z-0 h-full w-full object-cover"
       />
 
-      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center justify-center px-6 pt-32 pb-32 text-center sm:px-8 lg:pb-28">
+      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center justify-center px-6 pt-32 pb-20 text-center sm:px-8">
         {/* Unified badge */}
-        <div className="animate-fade-slide-in mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-bg-200/60 px-4 py-1.5 text-xs font-medium text-text-200 backdrop-blur-sm">
-          <span className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_12px_var(--accent)]" />
+        <div
+          className="animate-fade-slide-in mb-8 inline-flex items-center gap-2 rounded-full border bg-bg-200/60 px-4 py-1.5 text-xs font-medium uppercase backdrop-blur-sm"
+          style={{
+            borderColor: "#FF5C00",
+            color: "#FF5C00",
+            letterSpacing: "0.12em",
+            fontWeight: 500,
+          }}
+        >
+          <span className="h-1.5 w-1.5 rounded-full" style={{ background: "#FF5C00", boxShadow: "0 0 12px #FF5C00" }} />
           {badgeText}
         </div>
 
         {/* Headline */}
         <h1
-          className="animate-fade-slide-in font-display font-bold tracking-tight text-text-100"
+          className="animate-fade-slide-in font-display font-bold leading-tight text-text-100 text-4xl md:text-5xl lg:text-[60px]"
           style={{
-            fontSize: "clamp(2.5rem, 7vw, 6rem)",
-            lineHeight: 1.02,
-            letterSpacing: "-0.03em",
+            letterSpacing: "-0.02em",
             animationDelay: "0.1s",
           }}
         >
@@ -65,14 +61,14 @@ export function ResponsiveHeroBanner({
           <br />
           {titleLine2}{" "}
           {titleAccent && (
-            <span className="italic text-accent">{titleAccent}</span>
+            <span className="italic" style={{ color: "#FF5C00" }}>{titleAccent}</span>
           )}
         </h1>
 
         {/* Description */}
         <p
           className="animate-fade-slide-in mt-6 max-w-2xl text-base leading-relaxed text-text-300 sm:text-lg"
-          style={{ animationDelay: "0.2s" }}
+          style={{ animationDelay: "0.2s", fontWeight: 300, letterSpacing: "0.01em" }}
         >
           {description}
         </p>
@@ -83,13 +79,28 @@ export function ResponsiveHeroBanner({
           style={{ animationDelay: "0.3s" }}
         >
           <button
-            className="inline-flex w-full items-center justify-center gap-2 rounded-full px-6 py-3 font-sans text-sm font-semibold transition-all duration-200 hover:scale-[1.02] sm:w-auto"
-            style={{ background: "#FF6B2B", color: "#000000" }}
+            className="flex items-center justify-between rounded-full p-2 transition-all duration-[250ms] ease-out hover:scale-[1.02] hover:brightness-110 w-full sm:w-auto sm:min-w-[320px]"
+            style={{
+              background: "linear-gradient(135deg, #FF5C00 0%, #cc3300 40%, #1a0800 100%)",
+              boxShadow: "inset 0 1px 0 rgba(255,255,255,0.18), inset 0 -1px 0 rgba(0,0,0,0.25), 0 4px 24px rgba(255,92,0,0.3)",
+              backdropFilter: "blur(4px)",
+              fontWeight: 500,
+            }}
           >
-            {primaryCtaText}
-            <ArrowRight className="h-4 w-4" />
+            <span className="pl-6 pr-4 text-white text-[16px]" style={{ fontWeight: 500 }}>
+              {primaryCtaText}
+            </span>
+            <span
+              className="flex h-10 w-10 items-center justify-center rounded-full text-white"
+              style={{ background: "rgba(0,0,0,0.35)" }}
+            >
+              <ArrowRight className="h-4 w-4" />
+            </span>
           </button>
-          <button className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 font-sans text-sm font-semibold text-text-100 backdrop-blur-sm transition-all duration-200 hover:bg-white/10 sm:w-auto">
+          <button
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm text-text-100 backdrop-blur-sm transition-all duration-200 hover:bg-white/10 sm:w-auto"
+            style={{ fontWeight: 500 }}
+          >
             {secondaryCtaText}
           </button>
         </div>
@@ -101,7 +112,7 @@ export function ResponsiveHeroBanner({
         >
           <div className="mb-6 flex items-center justify-center gap-3">
             <span className="h-px w-8 bg-white/15" />
-            <span className="text-xs font-medium uppercase tracking-[0.2em] text-text-400">
+            <span className="text-xs uppercase text-text-400" style={{ fontWeight: 500, letterSpacing: "0.2em" }}>
               Resultados reais
             </span>
             <span className="h-px w-8 bg-white/15" />
@@ -123,23 +134,6 @@ export function ResponsiveHeroBanner({
               </div>
             ))}
           </div>
-        </div>
-      </div>
-
-      {/* Metrics ticker */}
-      <div className="absolute bottom-0 left-0 right-0 z-10 overflow-hidden border-t border-white/10 bg-bg-100/80 py-4 backdrop-blur-md">
-        <div className="animate-ticker flex w-max items-center gap-8 whitespace-nowrap">
-          {[...tickerItems, ...tickerItems].map((item, i) => (
-            <div key={i} className="flex items-center gap-8">
-              <div className="flex items-baseline gap-2">
-                <span className="font-display text-sm font-bold text-accent">
-                  {item.value}
-                </span>
-                <span className="text-sm text-text-300">{item.label}</span>
-              </div>
-              <span className="text-text-400">•</span>
-            </div>
-          ))}
         </div>
       </div>
     </section>
