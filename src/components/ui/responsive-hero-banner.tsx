@@ -39,6 +39,7 @@ export function ResponsiveHeroBanner({
   ];
 
   return (
+    <>
     <section className="relative min-h-screen w-full overflow-hidden bg-bg-0 text-text-100">
       <img
         src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/0e2dbea0-c0a9-413f-a57b-af279633c0df_3840w.jpg"
