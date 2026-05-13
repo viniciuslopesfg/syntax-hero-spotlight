@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import syntaxLogo from "@/assets/syntax-logo.png";
 
 const links = [
   { label: "Soluções", href: "#solucoes" },
@@ -15,8 +16,8 @@ export function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50">
       <div className="mx-auto mt-4 max-w-7xl px-4 sm:px-6">
         <nav className="flex items-center justify-between rounded-full border border-white/10 bg-bg-100/70 px-5 py-2.5 backdrop-blur-xl">
-          <a href="/" className="font-display text-2xl font-bold tracking-tight text-text-100">
-            syntax
+          <a href="/" className="flex items-center">
+            <img src={syntaxLogo} alt="Syntax" className="h-6 w-auto" />
           </a>
 
           <ul className="hidden items-center gap-8 md:flex">
