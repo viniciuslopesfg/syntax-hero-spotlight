@@ -59,20 +59,25 @@ export function ResponsiveHeroBanner({
 
         {/* Headline */}
         <h1
-          className="animate-fade-slide-in font-display text-4xl md:text-5xl lg:text-[56px]"
+          className="animate-fade-slide-in font-display text-text-100 text-4xl md:text-5xl lg:text-[56px]"
           style={{
-            fontWeight: 700,
+            fontWeight: 800,
             letterSpacing: "-0.02em",
-            lineHeight: 1.1,
+            lineHeight: 1.08,
             animationDelay: "0.1s",
-            color: "#FFFFFF",
           }}
         >
           {title}
           <br />
           {titleLine2}{" "}
           {titleAccent && (
-            <span style={{ color: "#FF6B00", fontStyle: "italic" }}>
+            <span
+              className="italic bg-clip-text text-transparent"
+              style={{
+                backgroundImage:
+                  "linear-gradient(90deg, #FFB07A 0%, #FF5C00 50%, #B33A00 100%)",
+              }}
+            >
               {titleAccent}
             </span>
           )}
