@@ -56,7 +56,7 @@ export function ResponsiveHeroBanner({
         }}
       />
 
-      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center justify-center px-6 text-center sm:px-8" style={{ paddingTop: "80px", paddingBottom: "64px" }}>
+      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center justify-center px-6 text-center sm:px-8" style={{ paddingTop: "140px", paddingBottom: "80px" }}>
         {/* Unified badge */}
         {badgeText && (
           <div className="animate-fade-slide-in mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-bg-200/60 px-4 py-1.5 text-xs font-medium text-text-200 backdrop-blur-sm">
@@ -67,14 +67,15 @@ export function ResponsiveHeroBanner({
 
         {/* Headline */}
         <h1
-          className="animate-fade-slide-in font-display text-text-100 text-4xl md:text-5xl lg:text-[56px]"
+          className="animate-fade-slide-in font-display text-text-100"
           style={{
-            fontWeight: 800,
+            fontWeight: 700,
             letterSpacing: "-0.02em",
-            lineHeight: 1.08,
+            lineHeight: 1.1,
+            fontSize: "clamp(42px, 5vw, 64px)",
             animationDelay: "0.1s",
             filter: "drop-shadow(0 8px 16px rgba(0,0,0,0.6)) drop-shadow(0 2px 4px rgba(0,0,0,0.4))",
-            marginBottom: "24px",
+            marginBottom: "28px",
           }}
         >
           {title}
@@ -100,11 +101,11 @@ export function ResponsiveHeroBanner({
             animationDelay: "0.2s",
             fontWeight: 300,
             color: "rgba(255, 255, 255, 0.55)",
-            fontSize: "17px",
-            lineHeight: 1.7,
-            maxWidth: "460px",
+            fontSize: "18px",
+            lineHeight: 1.6,
+            maxWidth: "520px",
             margin: "0 auto",
-            marginBottom: "40px",
+            marginBottom: "48px",
           }}
         >
           {description}
@@ -112,16 +113,18 @@ export function ResponsiveHeroBanner({
 
         {/* CTAs */}
         <div
-          className="animate-fade-slide-in mt-10 flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row"
+          className="animate-fade-slide-in flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row"
           style={{ animationDelay: "0.3s" }}
         >
           <button
-            className="relative overflow-hidden flex items-center justify-between rounded-full p-2 transition-all duration-[250ms] ease-out hover:scale-[1.02] hover:brightness-110 w-full sm:w-auto sm:min-w-[320px]"
+            className="relative overflow-hidden flex items-center justify-between rounded-full transition-all duration-[250ms] ease-out hover:scale-[1.02] hover:brightness-110 w-full sm:w-auto sm:min-w-[320px]"
             style={{
               background: "linear-gradient(135deg, #FF5C00 0%, #cc3300 40%, #1a0800 100%)",
               boxShadow: "inset 0 1px 0 rgba(255,255,255,0.18), inset 0 -1px 0 rgba(0,0,0,0.25), 0 4px 24px rgba(255,92,0,0.3)",
               backdropFilter: "blur(4px)",
               fontWeight: 500,
+              padding: "16px 32px",
+              fontSize: "16px",
             }}
           >
             <span
@@ -132,7 +135,7 @@ export function ResponsiveHeroBanner({
                   "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.18) 50%, transparent 100%)",
               }}
             />
-            <span className="relative flex-1 text-center pl-4 pr-2 text-white text-[16px]" style={{ fontWeight: 500 }}>
+            <span className="relative flex-1 text-center text-white" style={{ fontWeight: 500, fontSize: "16px" }}>
               {primaryCtaText}
             </span>
             <span
@@ -143,8 +146,8 @@ export function ResponsiveHeroBanner({
             </span>
           </button>
           <button
-            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm text-text-100 backdrop-blur-sm transition-all duration-200 hover:bg-white/10 sm:w-auto"
-            style={{ fontWeight: 500 }}
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 text-text-100 backdrop-blur-sm transition-all duration-200 hover:bg-white/10 sm:w-auto"
+            style={{ fontWeight: 500, padding: "16px 32px", fontSize: "16px" }}
           >
             {secondaryCtaText}
           </button>
@@ -153,18 +156,18 @@ export function ResponsiveHeroBanner({
         {/* Partners */}
         <div
           className="animate-fade-slide-in"
-          style={{ width: "100%", marginTop: "64px", animationDelay: "0.35s" }}
+          style={{ width: "100%", marginTop: "80px", animationDelay: "0.35s" }}
         >
           <p
             style={{
               fontFamily: "'Space Grotesk', sans-serif",
               fontSize: "11px",
               fontWeight: 400,
-              letterSpacing: "0.14em",
+              letterSpacing: "0.16em",
               textTransform: "uppercase",
               color: "rgba(255,255,255,0.3)",
               textAlign: "center",
-              marginBottom: "20px",
+              marginBottom: "28px",
             }}
           >
             Apoiado por grandes nomes
@@ -176,7 +179,7 @@ export function ResponsiveHeroBanner({
               maxWidth: "680px",
               margin: "0 auto",
               overflow: "hidden",
-              padding: "32px 0",
+              padding: "40px 0",
               borderTop: "1px solid rgba(255,255,255,0.06)",
               borderBottom: "1px solid rgba(255,255,255,0.06)",
               WebkitMaskImage:
@@ -190,7 +193,7 @@ export function ResponsiveHeroBanner({
                 display: "flex",
                 alignItems: "center",
                 width: "max-content",
-                gap: "56px",
+                gap: "64px",
                 animation: "marquee 28s linear infinite",
               }}
             >
@@ -200,7 +203,7 @@ export function ResponsiveHeroBanner({
                   src={logo.src}
                   alt={logo.name}
                   style={{
-                    height: "22px",
+                    height: "28px",
                     width: "auto",
                     objectFit: "contain",
                     filter: "brightness(0) invert(1)",
