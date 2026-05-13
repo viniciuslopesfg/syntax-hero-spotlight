@@ -1,4 +1,17 @@
 import { ArrowRight } from "lucide-react";
+import microsoftLogo from "@/assets/partners/microsoft.png";
+import metaLogo from "@/assets/partners/meta.png";
+import openaiLogo from "@/assets/partners/openai.png";
+import contaboLogo from "@/assets/partners/contabo.png";
+import lgpdLogo from "@/assets/partners/lgpd.png";
+
+const partnerLogos = [
+  { name: "Microsoft", src: microsoftLogo },
+  { name: "Meta", src: metaLogo },
+  { name: "OpenAI", src: openaiLogo },
+  { name: "Contabo", src: contaboLogo },
+  { name: "LGPD", src: lgpdLogo },
+];
 
 interface ResponsiveHeroBannerProps {
   badgeText?: string;
@@ -123,6 +136,60 @@ export function ResponsiveHeroBanner({
           >
             {secondaryCtaText}
           </button>
+        </div>
+
+        {/* Partners */}
+        <div
+          className="animate-fade-slide-in"
+          style={{
+            width: "100%",
+            paddingTop: "48px",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: "24px",
+            animationDelay: "0.35s",
+          }}
+        >
+          <span
+            style={{
+              fontFamily: "'Space Grotesk', sans-serif",
+              fontSize: "11px",
+              fontWeight: 400,
+              letterSpacing: "0.14em",
+              textTransform: "uppercase",
+              color: "rgba(255,255,255,0.3)",
+            }}
+          >
+            Apoiado por grandes nomes
+          </span>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexWrap: "wrap",
+              gap: "48px",
+            }}
+          >
+            {partnerLogos.map((logo) => (
+              <img
+                key={logo.name}
+                src={logo.src}
+                alt={logo.name}
+                style={{
+                  height: "28px",
+                  width: "auto",
+                  objectFit: "contain",
+                  filter: "brightness(0) invert(1)",
+                  opacity: 0.45,
+                  transition: "opacity 300ms ease",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.85")}
+                onMouseLeave={(e) => (e.currentTarget.style.opacity = "0.45")}
+              />
+            ))}
+          </div>
         </div>
 
         {/* Social proof */}
