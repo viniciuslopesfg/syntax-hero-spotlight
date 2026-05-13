@@ -162,14 +162,16 @@ export function ResponsiveHeroBanner({
             style={{
               position: "relative",
               width: "100%",
+              maxWidth: "680px",
+              margin: "0 auto",
               overflow: "hidden",
               padding: "32px 0",
               borderTop: "1px solid rgba(255,255,255,0.06)",
               borderBottom: "1px solid rgba(255,255,255,0.06)",
               WebkitMaskImage:
-                "linear-gradient(to right, transparent 0%, black 28%, black 72%, transparent 100%)",
+                "linear-gradient(to right, transparent 0%, black 22%, black 78%, transparent 100%)",
               maskImage:
-                "linear-gradient(to right, transparent 0%, black 28%, black 72%, transparent 100%)",
+                "linear-gradient(to right, transparent 0%, black 22%, black 78%, transparent 100%)",
             }}
           >
             <div
@@ -177,7 +179,7 @@ export function ResponsiveHeroBanner({
                 display: "flex",
                 alignItems: "center",
                 width: "max-content",
-                gap: "72px",
+                gap: "56px",
                 animation: "marquee 28s linear infinite",
               }}
             >
@@ -187,7 +189,7 @@ export function ResponsiveHeroBanner({
                   src={logo.src}
                   alt={logo.name}
                   style={{
-                    height: "28px",
+                    height: "22px",
                     width: "auto",
                     objectFit: "contain",
                     filter: "brightness(0) invert(1)",
