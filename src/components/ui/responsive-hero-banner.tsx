@@ -65,25 +65,14 @@ export function ResponsiveHeroBanner({
             letterSpacing: "-0.02em",
             lineHeight: 1.1,
             animationDelay: "0.1s",
-            color: "transparent",
-            backgroundImage:
-              "linear-gradient(180deg, #FFFFFF 0%, rgba(255,255,255,0.35) 100%)",
-            WebkitBackgroundClip: "text",
-            backgroundClip: "text",
+            color: "#FFFFFF",
           }}
         >
           {title}
           <br />
           {titleLine2}{" "}
           {titleAccent && (
-            <span
-              style={{
-                color: "#FF6B00",
-                fontStyle: "italic",
-                backgroundImage: "none",
-                WebkitTextFillColor: "#FF6B00",
-              }}
-            >
+            <span style={{ color: "#FF6B00", fontStyle: "italic" }}>
               {titleAccent}
             </span>
           )}
