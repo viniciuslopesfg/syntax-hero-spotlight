@@ -17,7 +17,7 @@ export function Navbar() {
       <div className="mx-auto mt-4 max-w-7xl px-4 sm:px-6">
         <nav className="flex items-center justify-between rounded-full border border-white/10 bg-bg-100/70 px-5 py-2.5 backdrop-blur-xl">
           <a href="/" className="flex items-center">
-            <img src={syntaxLogo} alt="Syntax" className="h-[22px] w-auto" />
+            <img src={syntaxLogo} alt="Syntax" style={{ height: "28px", width: "auto", objectFit: "contain" }} />
           </a>
 
           <ul className="hidden items-center gap-8 md:flex">
