@@ -59,12 +59,17 @@ export function ResponsiveHeroBanner({
 
         {/* Headline */}
         <h1
-          className="animate-fade-slide-in font-display text-text-100 text-4xl md:text-5xl lg:text-[56px]"
+          className="animate-fade-slide-in font-display text-4xl md:text-5xl lg:text-[56px]"
           style={{
-            fontWeight: 800,
+            fontWeight: 700,
             letterSpacing: "-0.02em",
-            lineHeight: 1.08,
+            lineHeight: 1.1,
             animationDelay: "0.1s",
+            color: "transparent",
+            backgroundImage:
+              "linear-gradient(180deg, #FFFFFF 0%, rgba(255,255,255,0.35) 100%)",
+            WebkitBackgroundClip: "text",
+            backgroundClip: "text",
           }}
         >
           {title}
@@ -72,10 +77,11 @@ export function ResponsiveHeroBanner({
           {titleLine2}{" "}
           {titleAccent && (
             <span
-              className="italic bg-clip-text text-transparent"
               style={{
-                backgroundImage:
-                  "linear-gradient(90deg, #FFB07A 0%, #FF5C00 50%, #B33A00 100%)",
+                color: "#FF6B00",
+                fontStyle: "italic",
+                backgroundImage: "none",
+                WebkitTextFillColor: "#FF6B00",
               }}
             >
               {titleAccent}
