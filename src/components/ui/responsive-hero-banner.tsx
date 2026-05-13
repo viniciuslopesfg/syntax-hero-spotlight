@@ -167,9 +167,9 @@ export function ResponsiveHeroBanner({
               borderTop: "1px solid rgba(255,255,255,0.06)",
               borderBottom: "1px solid rgba(255,255,255,0.06)",
               WebkitMaskImage:
-                "linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)",
+                "linear-gradient(to right, transparent 0%, black 28%, black 72%, transparent 100%)",
               maskImage:
-                "linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)",
+                "linear-gradient(to right, transparent 0%, black 28%, black 72%, transparent 100%)",
             }}
           >
             <div
@@ -191,11 +191,9 @@ export function ResponsiveHeroBanner({
                     width: "auto",
                     objectFit: "contain",
                     filter: "brightness(0) invert(1)",
-                    opacity: 0.45,
-                    transition: "opacity 300ms",
+                    opacity: 1,
+                    transition: "none",
                   }}
-                  onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.85")}
-                  onMouseLeave={(e) => (e.currentTarget.style.opacity = "0.45")}
                 />
               ))}
             </div>
