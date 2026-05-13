@@ -141,17 +141,9 @@ export function ResponsiveHeroBanner({
         {/* Partners */}
         <div
           className="animate-fade-slide-in"
-          style={{
-            width: "100%",
-            paddingTop: "48px",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: "24px",
-            animationDelay: "0.35s",
-          }}
+          style={{ width: "100%", paddingTop: "48px", animationDelay: "0.35s" }}
         >
-          <span
+          <p
             style={{
               fontFamily: "'Space Grotesk', sans-serif",
               fontSize: "11px",
@@ -159,36 +151,75 @@ export function ResponsiveHeroBanner({
               letterSpacing: "0.14em",
               textTransform: "uppercase",
               color: "rgba(255,255,255,0.3)",
+              textAlign: "center",
+              marginBottom: "24px",
             }}
           >
             Apoiado por grandes nomes
-          </span>
+          </p>
           <div
             style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              flexWrap: "wrap",
-              gap: "48px",
+              position: "relative",
+              width: "100%",
+              overflow: "hidden",
+              padding: "32px 0",
+              borderTop: "1px solid rgba(255,255,255,0.06)",
+              borderBottom: "1px solid rgba(255,255,255,0.06)",
             }}
           >
-            {partnerLogos.map((logo) => (
-              <img
-                key={logo.name}
-                src={logo.src}
-                alt={logo.name}
-                style={{
-                  height: "28px",
-                  width: "auto",
-                  objectFit: "contain",
-                  filter: "brightness(0) invert(1)",
-                  opacity: 0.45,
-                  transition: "opacity 300ms ease",
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.85")}
-                onMouseLeave={(e) => (e.currentTarget.style.opacity = "0.45")}
-              />
-            ))}
+            <div
+              aria-hidden
+              style={{
+                position: "absolute",
+                left: 0,
+                top: 0,
+                bottom: 0,
+                width: "220px",
+                background: "linear-gradient(to right, #000000 40%, transparent)",
+                zIndex: 10,
+                pointerEvents: "none",
+              }}
+            />
+            <div
+              aria-hidden
+              style={{
+                position: "absolute",
+                right: 0,
+                top: 0,
+                bottom: 0,
+                width: "220px",
+                background: "linear-gradient(to left, #000000 40%, transparent)",
+                zIndex: 10,
+                pointerEvents: "none",
+              }}
+            />
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                width: "max-content",
+                gap: "72px",
+                animation: "marquee 28s linear infinite",
+              }}
+            >
+              {[...partnerLogos, ...partnerLogos].map((logo, i) => (
+                <img
+                  key={`${logo.name}-${i}`}
+                  src={logo.src}
+                  alt={logo.name}
+                  style={{
+                    height: "28px",
+                    width: "auto",
+                    objectFit: "contain",
+                    filter: "brightness(0) invert(1)",
+                    opacity: 0.45,
+                    transition: "opacity 300ms",
+                  }}
+                  onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.85")}
+                  onMouseLeave={(e) => (e.currentTarget.style.opacity = "0.45")}
+                />
+              ))}
+            </div>
           </div>
         </div>
 
