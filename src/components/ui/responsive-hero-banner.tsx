@@ -50,13 +50,13 @@ export function ResponsiveHeroBanner({
 
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-0 z-[5] h-32"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-[5] h-48"
         style={{
           background: "linear-gradient(to bottom, transparent 0%, var(--bg-0) 100%)",
         }}
       />
 
-      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center justify-center px-6 pt-32 text-center sm:px-8" style={{ paddingBottom: "48px" }}>
+      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center justify-center px-6 text-center sm:px-8" style={{ paddingTop: "80px", paddingBottom: "64px" }}>
         {/* Unified badge */}
         {badgeText && (
           <div className="animate-fade-slide-in mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-bg-200/60 px-4 py-1.5 text-xs font-medium text-text-200 backdrop-blur-sm">
@@ -74,6 +74,7 @@ export function ResponsiveHeroBanner({
             lineHeight: 1.08,
             animationDelay: "0.1s",
             filter: "drop-shadow(0 8px 16px rgba(0,0,0,0.6)) drop-shadow(0 2px 4px rgba(0,0,0,0.4))",
+            marginBottom: "24px",
           }}
         >
           {title}
@@ -94,7 +95,7 @@ export function ResponsiveHeroBanner({
 
         {/* Description */}
         <p
-          className="animate-fade-slide-in mt-6"
+          className="animate-fade-slide-in"
           style={{
             animationDelay: "0.2s",
             fontWeight: 300,
@@ -102,7 +103,8 @@ export function ResponsiveHeroBanner({
             fontSize: "17px",
             lineHeight: 1.7,
             maxWidth: "460px",
-            margin: "24px auto 0",
+            margin: "0 auto",
+            marginBottom: "40px",
           }}
         >
           {description}
@@ -151,7 +153,7 @@ export function ResponsiveHeroBanner({
         {/* Partners */}
         <div
           className="animate-fade-slide-in"
-          style={{ width: "100%", paddingTop: "48px", animationDelay: "0.35s" }}
+          style={{ width: "100%", marginTop: "64px", animationDelay: "0.35s" }}
         >
           <p
             style={{
@@ -162,7 +164,7 @@ export function ResponsiveHeroBanner({
               textTransform: "uppercase",
               color: "rgba(255,255,255,0.3)",
               textAlign: "center",
-              marginBottom: "24px",
+              marginBottom: "20px",
             }}
           >
             Apoiado por grandes nomes
