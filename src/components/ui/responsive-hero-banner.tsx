@@ -72,7 +72,7 @@ export function ResponsiveHeroBanner({
             fontWeight: 700,
             letterSpacing: "-0.02em",
             lineHeight: 1.1,
-            fontSize: "clamp(42px, 5vw, 64px)",
+            fontSize: "clamp(32px, 3.8vw, 52px)",
             animationDelay: "0.1s",
             filter: "drop-shadow(0 8px 16px rgba(0,0,0,0.12)) drop-shadow(0 2px 4px rgba(0,0,0,0.08))",
             marginBottom: "28px",
