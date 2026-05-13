@@ -25,7 +25,7 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <main className="min-h-screen bg-bg-0 text-text-50">
+    <main className="min-h-screen bg-bg-0 text-text-100">
       <Navbar />
       <ResponsiveHeroBanner
         
