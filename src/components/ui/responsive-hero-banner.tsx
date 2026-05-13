@@ -48,6 +48,14 @@ export function ResponsiveHeroBanner({
         className="absolute inset-0 z-0 h-full w-full object-cover"
       />
 
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-[5] h-32"
+        style={{
+          background: "linear-gradient(to bottom, transparent 0%, var(--bg-0) 100%)",
+        }}
+      />
+
       <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center justify-center px-6 pt-32 text-center sm:px-8" style={{ paddingBottom: "48px" }}>
         {/* Unified badge */}
         {badgeText && (
