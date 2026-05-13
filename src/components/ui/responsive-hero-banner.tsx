@@ -47,7 +47,7 @@ export function ResponsiveHeroBanner({
         className="absolute inset-0 z-0 h-full w-full object-cover"
       />
 
-      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center justify-center px-6 pt-32 pb-20 text-center sm:px-8">
+      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center justify-center px-6 pt-32 text-center sm:px-8" style={{ paddingBottom: "48px" }}>
         {/* Unified badge */}
         {badgeText && (
           <div className="animate-fade-slide-in mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-bg-200/60 px-4 py-1.5 text-xs font-medium text-text-200 backdrop-blur-sm">
@@ -165,34 +165,12 @@ export function ResponsiveHeroBanner({
               padding: "32px 0",
               borderTop: "1px solid rgba(255,255,255,0.06)",
               borderBottom: "1px solid rgba(255,255,255,0.06)",
+              WebkitMaskImage:
+                "linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)",
+              maskImage:
+                "linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)",
             }}
           >
-            <div
-              aria-hidden
-              style={{
-                position: "absolute",
-                left: 0,
-                top: 0,
-                bottom: 0,
-                width: "220px",
-                background: "linear-gradient(to right, #000000 40%, transparent)",
-                zIndex: 10,
-                pointerEvents: "none",
-              }}
-            />
-            <div
-              aria-hidden
-              style={{
-                position: "absolute",
-                right: 0,
-                top: 0,
-                bottom: 0,
-                width: "220px",
-                background: "linear-gradient(to left, #000000 40%, transparent)",
-                zIndex: 10,
-                pointerEvents: "none",
-              }}
-            />
             <div
               style={{
                 display: "flex",
