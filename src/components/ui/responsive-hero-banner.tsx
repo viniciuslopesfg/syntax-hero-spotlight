@@ -39,6 +39,7 @@ export function ResponsiveHeroBanner({
   ];
 
   return (
+    <>
     <section className="relative min-h-screen w-full overflow-hidden bg-bg-0 text-text-100">
       <img
         src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/0e2dbea0-c0a9-413f-a57b-af279633c0df_3840w.jpg"
@@ -47,7 +48,7 @@ export function ResponsiveHeroBanner({
         className="absolute inset-0 z-0 h-full w-full object-cover"
       />
 
-      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center justify-center px-6 pt-32 pb-20 text-center sm:px-8">
+      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center justify-center px-6 pt-32 text-center sm:px-8" style={{ paddingBottom: "48px" }}>
         {/* Unified badge */}
         {badgeText && (
           <div className="animate-fade-slide-in mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-bg-200/60 px-4 py-1.5 text-xs font-medium text-text-200 backdrop-blur-sm">
@@ -165,34 +166,12 @@ export function ResponsiveHeroBanner({
               padding: "32px 0",
               borderTop: "1px solid rgba(255,255,255,0.06)",
               borderBottom: "1px solid rgba(255,255,255,0.06)",
+              WebkitMaskImage:
+                "linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)",
+              maskImage:
+                "linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)",
             }}
           >
-            <div
-              aria-hidden
-              style={{
-                position: "absolute",
-                left: 0,
-                top: 0,
-                bottom: 0,
-                width: "220px",
-                background: "linear-gradient(to right, #000000 40%, transparent)",
-                zIndex: 10,
-                pointerEvents: "none",
-              }}
-            />
-            <div
-              aria-hidden
-              style={{
-                position: "absolute",
-                right: 0,
-                top: 0,
-                bottom: 0,
-                width: "220px",
-                background: "linear-gradient(to left, #000000 40%, transparent)",
-                zIndex: 10,
-                pointerEvents: "none",
-              }}
-            />
             <div
               style={{
                 display: "flex",
@@ -222,49 +201,51 @@ export function ResponsiveHeroBanner({
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        {/* Social proof */}
-        <div
-          className="animate-fade-slide-in mt-16 w-full max-w-3xl"
-          style={{ animationDelay: "0.4s" }}
-        >
-          <div className="mb-6 flex items-center justify-center gap-3">
-            <span className="h-px w-8 bg-white/15" />
-            <span className="text-xs uppercase text-text-400" style={{ fontWeight: 500, letterSpacing: "0.2em" }}>
-              Resultados reais
-            </span>
-            <span className="h-px w-8 bg-white/15" />
-          </div>
-          <div className="flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-10">
-            {stats.map((item, i) => (
-              <div key={item.label} className="flex items-center gap-6 sm:gap-10">
-                <div className="text-center">
-                  <div
-                    className="font-display text-text-100"
-                    style={{ fontWeight: 700, fontSize: "28px" }}
-                  >
-                    {item.value}
-                  </div>
-                  <div
-                    className="mt-1 uppercase text-text-100"
-                    style={{
-                      fontWeight: 400,
-                      fontSize: "11px",
-                      opacity: 0.45,
-                      letterSpacing: "0.12em",
-                    }}
-                  >
-                    {item.label}
-                  </div>
+    <section className="relative w-full bg-bg-0 py-20">
+      <div
+        className="animate-fade-slide-in mx-auto w-full max-w-3xl px-6 sm:px-8"
+        style={{ animationDelay: "0.4s" }}
+      >
+        <div className="mb-6 flex items-center justify-center gap-3">
+          <span className="h-px w-8 bg-white/15" />
+          <span className="text-xs uppercase text-text-400" style={{ fontWeight: 500, letterSpacing: "0.2em" }}>
+            Resultados reais
+          </span>
+          <span className="h-px w-8 bg-white/15" />
+        </div>
+        <div className="flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-10">
+          {stats.map((item, i) => (
+            <div key={item.label} className="flex items-center gap-6 sm:gap-10">
+              <div className="text-center">
+                <div
+                  className="font-display text-text-100"
+                  style={{ fontWeight: 700, fontSize: "28px" }}
+                >
+                  {item.value}
                 </div>
-                {i < stats.length - 1 && (
-                  <span className="hidden text-text-400 sm:inline">•</span>
-                )}
+                <div
+                  className="mt-1 uppercase text-text-100"
+                  style={{
+                    fontWeight: 400,
+                    fontSize: "11px",
+                    opacity: 0.45,
+                    letterSpacing: "0.12em",
+                  }}
+                >
+                  {item.label}
+                </div>
               </div>
-            ))}
-          </div>
+              {i < stats.length - 1 && (
+                <span className="hidden text-text-400 sm:inline">•</span>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>
+    </>
   );
 }
