@@ -200,6 +200,7 @@ export function ResponsiveHeroBanner({
               ))}
             </div>
           </div>
+        </div>
       </div>
     </section>
 
