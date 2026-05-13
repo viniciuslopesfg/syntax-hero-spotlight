@@ -199,50 +199,51 @@ export function ResponsiveHeroBanner({
               ))}
             </div>
           </div>
-        </div>
+      </div>
+    </section>
 
-        {/* Social proof */}
-        <div
-          className="animate-fade-slide-in mt-16 w-full max-w-3xl"
-          style={{ animationDelay: "0.4s" }}
-        >
-          <div className="mb-6 flex items-center justify-center gap-3">
-            <span className="h-px w-8 bg-white/15" />
-            <span className="text-xs uppercase text-text-400" style={{ fontWeight: 500, letterSpacing: "0.2em" }}>
-              Resultados reais
-            </span>
-            <span className="h-px w-8 bg-white/15" />
-          </div>
-          <div className="flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-10">
-            {stats.map((item, i) => (
-              <div key={item.label} className="flex items-center gap-6 sm:gap-10">
-                <div className="text-center">
-                  <div
-                    className="font-display text-text-100"
-                    style={{ fontWeight: 700, fontSize: "28px" }}
-                  >
-                    {item.value}
-                  </div>
-                  <div
-                    className="mt-1 uppercase text-text-100"
-                    style={{
-                      fontWeight: 400,
-                      fontSize: "11px",
-                      opacity: 0.45,
-                      letterSpacing: "0.12em",
-                    }}
-                  >
-                    {item.label}
-                  </div>
+    <section className="relative w-full bg-bg-0 py-20">
+      <div
+        className="animate-fade-slide-in mx-auto w-full max-w-3xl px-6 sm:px-8"
+        style={{ animationDelay: "0.4s" }}
+      >
+        <div className="mb-6 flex items-center justify-center gap-3">
+          <span className="h-px w-8 bg-white/15" />
+          <span className="text-xs uppercase text-text-400" style={{ fontWeight: 500, letterSpacing: "0.2em" }}>
+            Resultados reais
+          </span>
+          <span className="h-px w-8 bg-white/15" />
+        </div>
+        <div className="flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-10">
+          {stats.map((item, i) => (
+            <div key={item.label} className="flex items-center gap-6 sm:gap-10">
+              <div className="text-center">
+                <div
+                  className="font-display text-text-100"
+                  style={{ fontWeight: 700, fontSize: "28px" }}
+                >
+                  {item.value}
                 </div>
-                {i < stats.length - 1 && (
-                  <span className="hidden text-text-400 sm:inline">•</span>
-                )}
+                <div
+                  className="mt-1 uppercase text-text-100"
+                  style={{
+                    fontWeight: 400,
+                    fontSize: "11px",
+                    opacity: 0.45,
+                    letterSpacing: "0.12em",
+                  }}
+                >
+                  {item.label}
+                </div>
               </div>
-            ))}
-          </div>
+              {i < stats.length - 1 && (
+                <span className="hidden text-text-400 sm:inline">•</span>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>
+    </>
   );
 }
