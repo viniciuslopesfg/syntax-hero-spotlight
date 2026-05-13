@@ -65,6 +65,7 @@ export function ResponsiveHeroBanner({
             letterSpacing: "-0.02em",
             lineHeight: 1.08,
             animationDelay: "0.1s",
+            textShadow: "0 2px 20px rgba(0,0,0,0.5), 0 1px 4px rgba(0,0,0,0.4)",
           }}
         >
           {title}
