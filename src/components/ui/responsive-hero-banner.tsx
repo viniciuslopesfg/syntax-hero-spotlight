@@ -1,16 +1,11 @@
 import { ArrowRight } from "lucide-react";
-import microsoftLogo from "@/assets/partners/microsoft.png";
-import metaLogo from "@/assets/partners/meta.png";
-import openaiLogo from "@/assets/partners/openai.png";
-import contaboLogo from "@/assets/partners/contabo.png";
-import lgpdLogo from "@/assets/partners/lgpd.png";
 
 const partnerLogos = [
-  { name: "Microsoft", src: microsoftLogo },
-  { name: "Meta", src: metaLogo },
-  { name: "OpenAI", src: openaiLogo },
-  { name: "Contabo", src: contaboLogo },
-  { name: "LGPD", src: lgpdLogo },
+  { name: "Legacy", src: "/legacy.png" },
+  { name: "Gym", src: "/gym.png" },
+  { name: "Smile", src: "/smile.png" },
+  { name: "Orla", src: "/orla.png" },
+  { name: "Meridian", src: "/meridian.png" },
 ];
 
 interface ResponsiveHeroBannerProps {
@@ -30,7 +25,6 @@ export function ResponsiveHeroBanner({
   titleAccent = "",
   description,
   primaryCtaText,
-  secondaryCtaText,
 }: ResponsiveHeroBannerProps) {
   const stats = [
     { value: "+20", label: "Empresas atendidas" },
@@ -39,7 +33,6 @@ export function ResponsiveHeroBanner({
   ];
 
   return (
-    <>
     <section className="relative min-h-screen w-full overflow-hidden bg-bg-0 text-text-100">
       <img
         src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/0e2dbea0-c0a9-413f-a57b-af279633c0df_3840w.jpg"
@@ -100,7 +93,7 @@ export function ResponsiveHeroBanner({
           style={{
             animationDelay: "0.2s",
             fontWeight: 300,
-            color: "rgba(255, 255, 255, 0.55)",
+            color: "rgba(255, 255, 255, 0.65)",
             fontSize: "18px",
             lineHeight: 1.6,
             maxWidth: "520px",
@@ -111,9 +104,9 @@ export function ResponsiveHeroBanner({
           {description}
         </p>
 
-        {/* CTAs */}
+        {/* CTA */}
         <div
-          className="animate-fade-slide-in flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row"
+          className="animate-fade-slide-in flex w-full justify-center"
           style={{ animationDelay: "0.3s" }}
         >
           <button
@@ -145,18 +138,54 @@ export function ResponsiveHeroBanner({
               <ArrowRight className="h-4 w-4" />
             </span>
           </button>
-          <button
-            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 text-text-100 backdrop-blur-sm transition-all duration-200 hover:bg-white/10 sm:w-auto"
-            style={{ fontWeight: 500, padding: "16px 32px", fontSize: "16px" }}
-          >
-            {secondaryCtaText}
-          </button>
+        </div>
+
+        {/* Resultados reais */}
+        <div
+          className="animate-fade-slide-in mx-auto w-full max-w-3xl"
+          style={{ animationDelay: "0.35s", marginTop: "80px" }}
+        >
+          <div className="mb-6 flex items-center justify-center gap-3">
+            <span className="h-px w-8 bg-white/15" />
+            <span className="text-xs uppercase text-text-400" style={{ fontWeight: 500, letterSpacing: "0.2em" }}>
+              Resultados reais
+            </span>
+            <span className="h-px w-8 bg-white/15" />
+          </div>
+          <div className="flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-10">
+            {stats.map((item, i) => (
+              <div key={item.label} className="flex items-center gap-6 sm:gap-10">
+                <div className="text-center">
+                  <div
+                    className="font-display text-text-100"
+                    style={{ fontWeight: 700, fontSize: "28px" }}
+                  >
+                    {item.value}
+                  </div>
+                  <div
+                    className="mt-1 uppercase text-text-100"
+                    style={{
+                      fontWeight: 400,
+                      fontSize: "11px",
+                      opacity: 0.45,
+                      letterSpacing: "0.12em",
+                    }}
+                  >
+                    {item.label}
+                  </div>
+                </div>
+                {i < stats.length - 1 && (
+                  <span className="hidden text-text-400 sm:inline">•</span>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Partners */}
         <div
           className="animate-fade-slide-in"
-          style={{ width: "100%", marginTop: "80px", animationDelay: "0.35s" }}
+          style={{ width: "100%", marginTop: "80px", animationDelay: "0.4s" }}
         >
           <p
             style={{
@@ -170,7 +199,7 @@ export function ResponsiveHeroBanner({
               marginBottom: "28px",
             }}
           >
-            Apoiado por grandes nomes
+            CONFIADO POR GRANDES NOMES
           </p>
           <div
             style={{
@@ -217,49 +246,5 @@ export function ResponsiveHeroBanner({
         </div>
       </div>
     </section>
-
-    <section className="relative w-full bg-bg-0 py-20">
-      <div
-        className="animate-fade-slide-in mx-auto w-full max-w-3xl px-6 sm:px-8"
-        style={{ animationDelay: "0.4s" }}
-      >
-        <div className="mb-6 flex items-center justify-center gap-3">
-          <span className="h-px w-8 bg-white/15" />
-          <span className="text-xs uppercase text-text-400" style={{ fontWeight: 500, letterSpacing: "0.2em" }}>
-            Resultados reais
-          </span>
-          <span className="h-px w-8 bg-white/15" />
-        </div>
-        <div className="flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-10">
-          {stats.map((item, i) => (
-            <div key={item.label} className="flex items-center gap-6 sm:gap-10">
-              <div className="text-center">
-                <div
-                  className="font-display text-text-100"
-                  style={{ fontWeight: 700, fontSize: "28px" }}
-                >
-                  {item.value}
-                </div>
-                <div
-                  className="mt-1 uppercase text-text-100"
-                  style={{
-                    fontWeight: 400,
-                    fontSize: "11px",
-                    opacity: 0.45,
-                    letterSpacing: "0.12em",
-                  }}
-                >
-                  {item.label}
-                </div>
-              </div>
-              {i < stats.length - 1 && (
-                <span className="hidden text-text-400 sm:inline">•</span>
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-    </>
   );
 }
