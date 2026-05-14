@@ -1,29 +1,36 @@
 import { ArrowRight } from "lucide-react";
+import microsoftLogo from "@/assets/partners/microsoft.png";
+import metaLogo from "@/assets/partners/meta.png";
+import openaiLogo from "@/assets/partners/openai.png";
+import contaboLogo from "@/assets/partners/contabo.png";
+import lgpdLogo from "@/assets/partners/lgpd.png";
 
 const partnerLogos = [
-  { name: "Legacy", src: "/legacy.png" },
-  { name: "Gym", src: "/gym.png" },
-  { name: "Smile", src: "/smile.png" },
-  { name: "Orla", src: "/orla.png" },
-  { name: "Meridian", src: "/meridian.png" },
+  { name: "Microsoft", src: microsoftLogo },
+  { name: "Meta", src: metaLogo },
+  { name: "OpenAI", src: openaiLogo },
+  { name: "Contabo", src: contaboLogo },
+  { name: "LGPD", src: lgpdLogo },
 ];
 
 interface ResponsiveHeroBannerProps {
   badgeText?: string;
   title: string;
-  titleLine2?: string;
+  titleLine2: string;
   titleAccent?: string;
   description: string;
   primaryCtaText: string;
-  secondaryCtaText?: string;
+  secondaryCtaText: string;
 }
 
 export function ResponsiveHeroBanner({
   badgeText,
   title,
+  titleLine2,
   titleAccent = "",
   description,
   primaryCtaText,
+  secondaryCtaText,
 }: ResponsiveHeroBannerProps) {
   const stats = [
     { value: "+20", label: "Empresas atendidas" },
@@ -32,21 +39,13 @@ export function ResponsiveHeroBanner({
   ];
 
   return (
-    <section className="relative w-full overflow-hidden bg-bg-0 text-text-100">
+    <>
+    <section className="relative min-h-screen w-full overflow-hidden bg-bg-0 text-text-100">
       <img
         src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/0e2dbea0-c0a9-413f-a57b-af279633c0df_3840w.jpg"
         alt=""
         aria-hidden
         className="absolute inset-0 z-0 h-full w-full object-cover"
-      />
-
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 z-[1]"
-        style={{
-          background:
-            "radial-gradient(ellipse 75% 65% at 40% 42%, rgba(0, 0, 0, 0.62) 0%, transparent 100%)",
-        }}
       />
 
       <div
@@ -57,14 +56,8 @@ export function ResponsiveHeroBanner({
         }}
       />
 
-      {/* Above-the-fold hero container (100vh) */}
-      <div
-        className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center justify-center text-center"
-        style={{
-          minHeight: "100vh",
-          padding: "100px 24px 60px",
-        }}
-      >
+      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center justify-center px-6 text-center sm:px-8" style={{ paddingTop: "140px", paddingBottom: "80px" }}>
+        {/* Unified badge */}
         {badgeText && (
           <div className="animate-fade-slide-in mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-bg-200/60 px-4 py-1.5 text-xs font-medium text-text-200 backdrop-blur-sm">
             <span className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_12px_var(--accent)]" />
@@ -78,17 +71,16 @@ export function ResponsiveHeroBanner({
           style={{
             fontWeight: 700,
             letterSpacing: "-0.02em",
-            lineHeight: 1.12,
-            fontSize: "clamp(38px, 4.2vw, 58px)",
-            maxWidth: "760px",
-            margin: "0 auto 24px",
-            textAlign: "center",
+            lineHeight: 1.1,
+            fontSize: "clamp(32px, 3.8vw, 52px)",
             animationDelay: "0.1s",
-            filter:
-              "drop-shadow(0 8px 16px rgba(0,0,0,0.12)) drop-shadow(0 2px 4px rgba(0,0,0,0.08))",
+            filter: "drop-shadow(0 8px 16px rgba(0,0,0,0.12)) drop-shadow(0 2px 4px rgba(0,0,0,0.08))",
+            marginBottom: "28px",
           }}
         >
-          {title}{" "}
+          {title}
+          <br />
+          {titleLine2}{" "}
           {titleAccent && (
             <span
               className="italic bg-clip-text text-transparent"
@@ -102,39 +94,34 @@ export function ResponsiveHeroBanner({
           )}
         </h1>
 
-        {/* Sub-headline */}
+        {/* Description */}
         <p
           className="animate-fade-slide-in"
           style={{
             animationDelay: "0.2s",
             fontWeight: 300,
-            color: "#ffffff",
-            opacity: 0.85,
-            fontSize: "17px",
-            lineHeight: 1.65,
-            maxWidth: "500px",
-            margin: "0 auto 48px",
-            textAlign: "center",
+            color: "rgba(255, 255, 255, 0.55)",
+            fontSize: "18px",
+            lineHeight: 1.6,
+            maxWidth: "520px",
+            margin: "0 auto",
+            marginBottom: "48px",
           }}
         >
           {description}
         </p>
 
-        {/* CTA */}
+        {/* CTAs */}
         <div
-          className="animate-fade-slide-in flex w-full justify-center"
+          className="animate-fade-slide-in flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row"
           style={{ animationDelay: "0.3s" }}
         >
           <button
             className="relative overflow-hidden flex items-center justify-between rounded-full transition-all duration-[250ms] ease-out hover:scale-[1.02] hover:brightness-110 w-full sm:w-auto sm:min-w-[320px]"
             style={{
-              background:
-                "linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 107, 0, 0.75) 100%)",
-              border: "1px solid rgba(255, 255, 255, 0.15)",
-              boxShadow:
-                "0 4px 24px rgba(255, 107, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
-              backdropFilter: "blur(12px)",
-              WebkitBackdropFilter: "blur(12px)",
+              background: "linear-gradient(135deg, #FF5C00 0%, #cc3300 40%, #1a0800 100%)",
+              boxShadow: "inset 0 1px 0 rgba(255,255,255,0.18), inset 0 -1px 0 rgba(0,0,0,0.25), 0 4px 24px rgba(255,92,0,0.3)",
+              backdropFilter: "blur(4px)",
               fontWeight: 500,
               padding: "16px 32px",
               fontSize: "16px",
@@ -148,10 +135,7 @@ export function ResponsiveHeroBanner({
                   "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.18) 50%, transparent 100%)",
               }}
             />
-            <span
-              className="relative flex-1 text-center text-white"
-              style={{ fontWeight: 500, fontSize: "16px" }}
-            >
+            <span className="relative flex-1 text-center text-white" style={{ fontWeight: 500, fontSize: "16px" }}>
               {primaryCtaText}
             </span>
             <span
@@ -161,53 +145,95 @@ export function ResponsiveHeroBanner({
               <ArrowRight className="h-4 w-4" />
             </span>
           </button>
+          <button
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 text-text-100 backdrop-blur-sm transition-all duration-200 hover:bg-white/10 sm:w-auto"
+            style={{ fontWeight: 500, padding: "16px 32px", fontSize: "16px" }}
+          >
+            {secondaryCtaText}
+          </button>
         </div>
 
-        {/* Resultados reais */}
+        {/* Partners */}
         <div
           className="animate-fade-slide-in"
-          style={{
-            animationDelay: "0.35s",
-            marginTop: "80px",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            textAlign: "center",
-            width: "100%",
-          }}
+          style={{ width: "100%", marginTop: "80px", animationDelay: "0.35s" }}
         >
-          <div className="mb-6 flex items-center justify-center gap-3">
-            <span className="h-px w-8 bg-white/15" />
-            <span
-              className="text-xs uppercase text-text-400"
-              style={{ fontWeight: 500, letterSpacing: "0.2em" }}
-            >
-              Resultados reais
-            </span>
-            <span className="h-px w-8 bg-white/15" />
-          </div>
+          <p
+            style={{
+              fontFamily: "'Space Grotesk', sans-serif",
+              fontSize: "11px",
+              fontWeight: 400,
+              letterSpacing: "0.16em",
+              textTransform: "uppercase",
+              color: "rgba(255,255,255,0.3)",
+              textAlign: "center",
+              marginBottom: "28px",
+            }}
+          >
+            Apoiado por grandes nomes
+          </p>
           <div
             style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "flex-start",
-              gap: "64px",
+              position: "relative",
               width: "100%",
               maxWidth: "680px",
               margin: "0 auto",
-              flexWrap: "wrap",
+              overflow: "hidden",
+              padding: "40px 0",
+              borderTop: "1px solid rgba(255,255,255,0.06)",
+              borderBottom: "1px solid rgba(255,255,255,0.06)",
+              WebkitMaskImage:
+                "linear-gradient(to right, transparent 0%, black 22%, black 78%, transparent 100%)",
+              maskImage:
+                "linear-gradient(to right, transparent 0%, black 22%, black 78%, transparent 100%)",
             }}
           >
-            {stats.map((item) => (
-              <div
-                key={item.label}
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  textAlign: "center",
-                }}
-              >
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                width: "max-content",
+                gap: "64px",
+                animation: "marquee 28s linear infinite",
+              }}
+            >
+              {[...partnerLogos, ...partnerLogos].map((logo, i) => (
+                <img
+                  key={`${logo.name}-${i}`}
+                  src={logo.src}
+                  alt={logo.name}
+                  style={{
+                    height: "28px",
+                    width: "auto",
+                    objectFit: "contain",
+                    filter: "brightness(0) invert(1)",
+                    opacity: 1,
+                    transition: "none",
+                  }}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section className="relative w-full bg-bg-0 py-20">
+      <div
+        className="animate-fade-slide-in mx-auto w-full max-w-3xl px-6 sm:px-8"
+        style={{ animationDelay: "0.4s" }}
+      >
+        <div className="mb-6 flex items-center justify-center gap-3">
+          <span className="h-px w-8 bg-white/15" />
+          <span className="text-xs uppercase text-text-400" style={{ fontWeight: 500, letterSpacing: "0.2em" }}>
+            Resultados reais
+          </span>
+          <span className="h-px w-8 bg-white/15" />
+        </div>
+        <div className="flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-10">
+          {stats.map((item, i) => (
+            <div key={item.label} className="flex items-center gap-6 sm:gap-10">
+              <div className="text-center">
                 <div
                   className="font-display text-text-100"
                   style={{ fontWeight: 700, fontSize: "28px" }}
@@ -226,73 +252,14 @@ export function ResponsiveHeroBanner({
                   {item.label}
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Partners carousel — below the fold */}
-      <div
-        className="animate-fade-slide-in relative z-10"
-        style={{ width: "100%", padding: "60px 24px", animationDelay: "0.4s" }}
-      >
-        <p
-          style={{
-            fontFamily: "'Space Grotesk', sans-serif",
-            fontSize: "11px",
-            fontWeight: 400,
-            letterSpacing: "0.16em",
-            textTransform: "uppercase",
-            color: "rgba(255,255,255,0.3)",
-            textAlign: "center",
-            marginBottom: "28px",
-          }}
-        >
-          CONFIADO POR GRANDES NOMES
-        </p>
-        <div
-          style={{
-            position: "relative",
-            width: "100%",
-            maxWidth: "680px",
-            margin: "0 auto",
-            overflow: "hidden",
-            padding: "40px 0",
-            borderTop: "1px solid rgba(255,255,255,0.06)",
-            borderBottom: "1px solid rgba(255,255,255,0.06)",
-            WebkitMaskImage:
-              "linear-gradient(to right, transparent 0%, black 22%, black 78%, transparent 100%)",
-            maskImage:
-              "linear-gradient(to right, transparent 0%, black 22%, black 78%, transparent 100%)",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              width: "max-content",
-              gap: "64px",
-              animation: "marquee 28s linear infinite",
-            }}
-          >
-            {[...partnerLogos, ...partnerLogos].map((logo, i) => (
-              <img
-                key={`${logo.name}-${i}`}
-                src={logo.src}
-                alt={logo.name}
-                style={{
-                  height: "28px",
-                  width: "auto",
-                  objectFit: "contain",
-                  filter: "brightness(0) invert(1)",
-                  opacity: 1,
-                  transition: "none",
-                }}
-              />
-            ))}
-          </div>
+              {i < stats.length - 1 && (
+                <span className="hidden text-text-400 sm:inline">•</span>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>
+    </>
   );
 }

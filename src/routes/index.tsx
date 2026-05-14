@@ -28,10 +28,13 @@ function Index() {
     <main className="min-h-screen bg-bg-0 text-text-100">
       <Navbar />
       <ResponsiveHeroBanner
-        title="Potencialize o seu funil de vendas com"
-        titleAccent="I.A"
+        
+        title="Seu próximo funcionário não dorme,"
+        titleLine2="não falta e nunca perde um"
+        titleAccent="lead."
         description="Construímos Agentes de IA sob medida que prospectam, qualificam e reativam leads sem aumentar sua equipe."
         primaryCtaText="Quero meu Agente de IA"
+        secondaryCtaText="Ver resultados reais"
       />
     </main>
   );
