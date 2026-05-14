@@ -43,6 +43,15 @@ export function ResponsiveHeroBanner({
 
       <div
         aria-hidden
+        className="pointer-events-none absolute inset-0 z-[1]"
+        style={{
+          background:
+            "radial-gradient(ellipse 75% 65% at 40% 42%, rgba(0, 0, 0, 0.62) 0%, transparent 100%)",
+        }}
+      />
+
+      <div
+        aria-hidden
         className="pointer-events-none absolute inset-x-0 bottom-0 z-[5] h-48"
         style={{
           background: "linear-gradient(to bottom, transparent 0%, var(--bg-0) 100%)",
