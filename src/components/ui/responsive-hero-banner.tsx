@@ -152,6 +152,7 @@ export function ResponsiveHeroBanner({
             </span>
           </button>
         </div>
+        </div>
 
         {/* Resultados reais */}
         <div
