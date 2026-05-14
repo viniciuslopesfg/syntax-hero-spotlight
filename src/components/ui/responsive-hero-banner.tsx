@@ -58,6 +58,19 @@ export function ResponsiveHeroBanner({
           </div>
         )}
 
+        <div
+          style={{
+            backdropFilter: "blur(16px)",
+            WebkitBackdropFilter: "blur(16px)",
+            background: "rgba(0, 0, 0, 0.30)",
+            borderRadius: "24px",
+            padding: "48px 64px",
+            border: "1px solid rgba(255, 255, 255, 0.06)",
+            maxWidth: "860px",
+            margin: "0 auto",
+            width: "100%",
+          }}
+        >
         {/* Headline */}
         <h1
           className="animate-fade-slide-in font-display text-text-100"
