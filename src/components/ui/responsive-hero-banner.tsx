@@ -130,12 +130,12 @@ export function ResponsiveHeroBanner({
               border: "1px solid rgba(255, 255, 255, 0.10)",
               display: "flex",
               alignItems: "center",
-              gap: 0,
+              gap: 8,
               backdropFilter: "blur(8px)",
             }}
           >
             <div
-              className="transition-shadow duration-[250ms] ease-out group-hover:!shadow-[inset_0_1px_0_rgba(255,255,255,0.15),0_0_60px_rgba(255,92,0,0.5)]"
+              className="relative overflow-hidden transition-shadow duration-[250ms] ease-out group-hover:!shadow-[inset_0_1px_0_rgba(255,255,255,0.15),0_0_60px_rgba(255,92,0,0.5)]"
               style={{
                 borderRadius: 9999,
                 padding: "16px 40px",
@@ -148,7 +148,15 @@ export function ResponsiveHeroBanner({
                 textAlign: "center",
               }}
             >
-              {primaryCtaText}
+              <span
+                aria-hidden
+                className="animate-shine-sweep pointer-events-none absolute inset-y-0 left-0 w-1/3"
+                style={{
+                  background:
+                    "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.18) 50%, transparent 100%)",
+                }}
+              />
+              <span className="relative">{primaryCtaText}</span>
             </div>
             <div
               style={{
