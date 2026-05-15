@@ -135,7 +135,7 @@ export function ResponsiveHeroBanner({
             }}
           >
             <div
-              className="transition-shadow duration-[250ms] ease-out"
+              className="transition-shadow duration-[250ms] ease-out group-hover:!shadow-[inset_0_1px_0_rgba(255,255,255,0.15),0_0_60px_rgba(255,92,0,0.5)]"
               style={{
                 borderRadius: 9999,
                 padding: "16px 40px",
