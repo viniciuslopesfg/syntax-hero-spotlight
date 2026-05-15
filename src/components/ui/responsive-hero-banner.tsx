@@ -187,20 +187,6 @@ export function ResponsiveHeroBanner({
           className="animate-fade-slide-in"
           style={{ width: "100%", marginTop: "80px", animationDelay: "0.35s" }}
         >
-          <p
-            style={{
-              fontFamily: "'Space Grotesk', sans-serif",
-              fontSize: "11px",
-              fontWeight: 400,
-              letterSpacing: "0.16em",
-              textTransform: "uppercase",
-              color: "rgba(255,255,255,0.3)",
-              textAlign: "center",
-              marginBottom: "28px",
-            }}
-          >
-            Apoiado por grandes nomes
-          </p>
           <div
             style={{
               position: "relative",
