@@ -69,14 +69,14 @@ export function ResponsiveHeroBanner({
         <h1
           className="animate-fade-slide-in mt-[60px]"
           style={{
-            fontFamily: "'Playfair Display', serif",
-            fontWeight: 400,
-            fontSize: "clamp(36px, 4.2vw, 54px)",
-            lineHeight: 1.15,
-            letterSpacing: "-0.01em",
+            fontFamily: "Geist",
+            fontWeight: 500,
+            fontSize: "clamp(64px, 4.2vw, 54px)",
+            lineHeight: 1,
+            letterSpacing: "-0.02em",
             color: "rgba(255, 255, 255, 0.90)",
             animationDelay: "0.1s",
-            filter: "drop-shadow(0 8px 16px rgba(0,0,0,0.12)) drop-shadow(0 2px 4px rgba(0,0,0,0.08))",
+            filter: "drop-shadow(0 8px 16px rgba(0,0,0,0.30)) drop-shadow(0 2px 4px rgba(0,0,0,0.08))",
             marginBottom: "28px",
             textAlign: "center",
           }}
@@ -105,9 +105,9 @@ export function ResponsiveHeroBanner({
             fontFamily: "'Space Grotesk', sans-serif",
             fontWeight: 300,
             fontSize: "clamp(14px, 1.4vw, 17px)",
-            lineHeight: 1.75,
+            lineHeight: 1.30,
             color: "rgba(255, 255, 255, 0.60)",
-            maxWidth: "520px",
+            maxWidth: "570px",
             margin: "0 auto",
             marginBottom: "48px",
             textAlign: "center",
@@ -128,7 +128,7 @@ export function ResponsiveHeroBanner({
               boxShadow: "inset 0 1px 0 rgba(255,255,255,0.18), inset 0 -1px 0 rgba(0,0,0,0.25), 0 4px 24px rgba(255,92,0,0.3)",
               backdropFilter: "blur(4px)",
               fontWeight: 500,
-              padding: "16px 32px",
+              padding: "10px 24px",
               fontSize: "16px",
             }}
           >
@@ -152,7 +152,7 @@ export function ResponsiveHeroBanner({
           </button>
           <button
             className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 text-text-100 backdrop-blur-sm transition-all duration-200 hover:bg-white/10 sm:w-auto"
-            style={{ fontWeight: 500, padding: "16px 32px", fontSize: "16px" }}
+            style={{ fontWeight: 500, padding: "10px 26px", fontSize: "14px" }}
           >
             {secondaryCtaText}
           </button>
