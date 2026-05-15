@@ -67,7 +67,7 @@ export function ResponsiveHeroBanner({
 
         {/* Headline */}
         <h1
-          className="animate-fade-slide-in font-display text-text-100"
+          className="animate-fade-slide-in font-display text-text-100 font-medium mt-[45px] font-sans text-6xl"
           style={{
             fontWeight: 700,
             letterSpacing: "-0.02em",
