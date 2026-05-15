@@ -122,34 +122,50 @@ export function ResponsiveHeroBanner({
           style={{ animationDelay: "0.3s" }}
         >
           <button
-            className="relative overflow-hidden flex items-center justify-between rounded-full transition-all duration-[250ms] ease-out hover:scale-[1.02] hover:brightness-110 w-full sm:w-auto sm:min-w-[320px]"
+            className="group transition-all duration-[250ms] ease-out hover:scale-[1.02] w-full sm:w-auto sm:min-w-[320px]"
             style={{
-              background: "linear-gradient(135deg, #FF5C00 0%, #cc3300 40%, #1a0800 100%)",
-              boxShadow: "inset 0 1px 0 rgba(255,255,255,0.18), inset 0 -1px 0 rgba(0,0,0,0.25), 0 4px 24px rgba(255,92,0,0.3)",
-              backdropFilter: "blur(4px)",
-              fontWeight: 500,
-              padding: "10px 24px",
-              fontSize: "16px",
+              borderRadius: 9999,
+              padding: 6,
+              background: "rgba(255, 255, 255, 0.06)",
+              border: "1px solid rgba(255, 255, 255, 0.10)",
+              display: "flex",
+              alignItems: "center",
+              gap: 0,
+              backdropFilter: "blur(8px)",
             }}
           >
-            <span
-              aria-hidden
-              className="animate-shine-sweep pointer-events-none absolute inset-y-0 left-0 w-1/3"
+            <div
+              className="transition-shadow duration-[250ms] ease-out group-hover:!shadow-[inset_0_1px_0_rgba(255,255,255,0.15),0_0_60px_rgba(255,92,0,0.5)]"
               style={{
-                background:
-                  "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.18) 50%, transparent 100%)",
+                borderRadius: 9999,
+                padding: "16px 40px",
+                background: "linear-gradient(135deg, #FF5C00 0%, #FF8C42 40%, #cc3300 100%)",
+                boxShadow: "inset 0 1px 0 rgba(255,255,255,0.15), 0 0 40px rgba(255,92,0,0.35)",
+                flex: 1,
+                color: "#FFFFFF",
+                fontWeight: 500,
+                fontSize: 16,
+                textAlign: "center",
               }}
-            />
-            <span className="relative flex-1 text-center text-white" style={{ fontWeight: 500, fontSize: "16px" }}>
-              {primaryCtaText}
-            </span>
-            <span
-              className="relative flex h-10 w-10 items-center justify-center rounded-full text-white"
-              style={{ background: "rgba(0,0,0,0.35)" }}
             >
-              <ArrowRight className="h-4 w-4" />
-            </span>
+              {primaryCtaText}
+            </div>
+            <div
+              style={{
+                width: 48,
+                height: 48,
+                borderRadius: 9999,
+                background: "rgba(0, 0, 0, 0.35)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexShrink: 0,
+              }}
+            >
+              <ArrowRight color="#FFFFFF" size={18} />
+            </div>
           </button>
+
           <button
             className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 text-text-100 backdrop-blur-sm transition-all duration-200 hover:bg-white/10 sm:w-auto"
             style={{ fontWeight: 500, padding: "10px 26px", fontSize: "14px" }}
