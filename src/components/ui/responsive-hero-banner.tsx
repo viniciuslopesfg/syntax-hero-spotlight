@@ -67,15 +67,18 @@ export function ResponsiveHeroBanner({
 
         {/* Headline */}
         <h1
-          className="animate-fade-slide-in font-display text-text-100 font-sans text-6xl font-medium mt-[60px]"
+          className="animate-fade-slide-in mt-[60px]"
           style={{
-            fontWeight: 700,
-            letterSpacing: "-0.02em",
-            lineHeight: 1.1,
-            fontSize: "clamp(32px, 3.8vw, 52px)",
+            fontFamily: "'Playfair Display', serif",
+            fontWeight: 400,
+            fontSize: "clamp(36px, 4.2vw, 54px)",
+            lineHeight: 1.15,
+            letterSpacing: "-0.01em",
+            color: "rgba(255, 255, 255, 0.90)",
             animationDelay: "0.1s",
             filter: "drop-shadow(0 8px 16px rgba(0,0,0,0.12)) drop-shadow(0 2px 4px rgba(0,0,0,0.08))",
             marginBottom: "28px",
+            textAlign: "center",
           }}
         >
           {title}
@@ -83,10 +86,10 @@ export function ResponsiveHeroBanner({
           {titleLine2}{" "}
           {titleAccent && (
             <span
-              className="italic bg-clip-text text-transparent"
               style={{
-                backgroundImage:
-                  "linear-gradient(90deg, #FFB07A 0%, #FF5C00 50%, #B33A00 100%)",
+                color: "#FF5C00",
+                fontStyle: "italic",
+                fontWeight: 400,
               }}
             >
               {titleAccent}
@@ -99,13 +102,15 @@ export function ResponsiveHeroBanner({
           className="animate-fade-slide-in"
           style={{
             animationDelay: "0.2s",
+            fontFamily: "'Space Grotesk', sans-serif",
             fontWeight: 300,
-            color: "rgba(255, 255, 255, 0.55)",
-            fontSize: "18px",
-            lineHeight: 1.6,
+            fontSize: "clamp(14px, 1.4vw, 17px)",
+            lineHeight: 1.75,
+            color: "rgba(255, 255, 255, 0.60)",
             maxWidth: "520px",
             margin: "0 auto",
             marginBottom: "48px",
+            textAlign: "center",
           }}
         >
           {description}
